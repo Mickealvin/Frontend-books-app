@@ -1,0 +1,61 @@
+<div class="card m-4 p-1"> 
+    <div class="card-header"><h5>Create New Book</h5></div>
+        <div class="card-body">
+            <form [formGroup]="Form" (ngSubmit)="saveNew()">
+              <fieldset>
+                <div class="form-group row"></div>
+                <div class="form-group">
+                  <label for="name">Title:</label>
+                  <input
+                    class="form-control"
+                    placeholder="Tile"
+                    formControlName="Title"
+                  />
+                </div>
+    
+                <div class="form-group">
+                  <label for="name">Description:</label>
+                  <input
+                    class="form-control"
+                    placeholder="Description"
+                    formControlName="Description"
+                  />
+                </div>
+          
+          
+                <div class="form-group">
+                  <label for="name">PageCount:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Page Count"
+                    formControlName="PageCount"
+                  />
+                </div>
+                <div class="form-group">
+                    <label for="name">Excerpt:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Excerpt"
+                      formControlName="Excerpt"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="name">Publish Date:</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Date"
+                      formControlName="PublishDate"
+                    />
+                  </div>
+               
+                  <button [disabled]="Form.invalid" type="submit" class="btn btn-outline-success btn-block">
+                    Enviar
+                  </button>    
+              </fieldset>
+          </form>
+        </div>
+    </div>
